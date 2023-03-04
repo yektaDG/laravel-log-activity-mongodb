@@ -1,6 +1,6 @@
 <?php
-namespace YektaDG\LaravelLogActivityMongodb\Traits;
-use YektaDG\LaravelLogActivityMongodb\Models\Log;
+namespace Yektadg\LaravelLogActivityMongodb\Traits;
+use Yektadg\LaravelLogActivityMongodb\Models\Log;
 
 trait YektaLog{
 
@@ -25,7 +25,6 @@ trait YektaLog{
                     'route'=> $instance->getShowRoute(),
                 ]
             );
-            // dd($instance->getTable());
             foreach($instance->getForeignKeys() as $key=>$foreign_key){
                 $parent = New $key;
                 $temp =explode("\\", get_class($instance));
@@ -85,7 +84,6 @@ trait YektaLog{
                         'route'=> $instance->getShowRoute(),
                     ]
                 );
-                // dd(Log::all());
             }
         });
 
@@ -112,7 +110,6 @@ trait YektaLog{
                     'route'=> $instance->getShowRoute(),
                 ]
             );
-
             foreach($instance->getForeignKeys() as $key=>$foreign_key){
                 $parent = New $key;
                 $temp =explode("\\", get_class($instance));

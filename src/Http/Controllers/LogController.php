@@ -10,7 +10,7 @@ class LogController extends Controller
 
     public function index()
     {
-        $logs = Log::where('created_at' ,'!=', null);
+        $logs = Log::all();
         return view('logpackage::logs.index', compact('logs')); 
     }
 

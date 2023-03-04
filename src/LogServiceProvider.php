@@ -1,6 +1,6 @@
 <?php
 
-namespace YektaDG\LaravelLogActivityMongodb;
+namespace Yektadg\LaravelLogActivityMongodb;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,10 +13,14 @@ class LogServiceProvider extends ServiceProvider
 
   public function boot()
   {
+ 
+    $this->publishes([
+        __DIR__.'/../config/database.php' => config_path('database.php'),
+    ], 'config');
+    
     $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     $this->loadViewsFrom(__DIR__.'/../resources/views', 'logpackage');
 
-    // if 'src/helpers.php' does not work, try with 'helpers.php'
     if (file_exists($file = app_path('src/helpers.php'))) { 
         require $file;
     } 
