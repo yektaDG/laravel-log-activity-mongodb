@@ -1,0 +1,29 @@
+{
+    "name": "yektadg/laravel-log-activity-mongodb",
+    "autoload": {
+        "psr-4": {
+            "Yektadg\\LaravelLogActivityMongodb\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+          ]
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yektadg\\LaravelLogActivityMongodb\\LogServiceProvider"
+            ]
+        }
+    },
+
+    "authors": [
+        {
+            "name": "MahsaAflaki",
+            "email": "mahsa@rapidcents.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^7.0"
+    }
+}
