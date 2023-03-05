@@ -26,42 +26,27 @@ installation :
 
 - Add a 'protected $foreignKeys' array to your model like this:
     
-    class Test extends Model
-            {
-                ...
-                protected $foreignKeys = [
-                    'App\Models\Ticket' => 'ticket_id', 
-                    'App\Models\User' => 'user_id',
-                ];
-                ...
-            }
+    protected $foreignKeys = 
+    [
+        'App\Models\Ticket' => 'ticket_id', 
+        'App\Models\User' => 'user_id',
+    ]
 
     'ticket_id' and 'user_id' are the referenced fields in this model, and 'App\Models\Ticket' and 'App\Models\User' are their corresponding classes.
 
 - Add a 'getForeignKeys()' method to your model that returns the 'foreignKeys' variable:
     
-     class Test extends Model
-            {
-                ...
-                public function getForeignKeys(){
-                        return $this->foreignKeys;
-                    }
-                ...
-            }
+    public function getForeignKeys(){
+            return $this->foreignKeys;
+        }
 
     This method will allow you to retrieve the 'foreignKeys' array.
 
-- Add a 'getShowRoute()' method to your model that returns a route name. this route will saved in database and You can use this in your views to create a link to the logged object:
+- Add a 'getShowRoute()' method to your model that returns a route name. this route will saved in database and You can use this method in your views to create a link to the logged object:
 
-    class Test extends Model
-            {
-                ...
-                public function getShowRoute()
-                    {
-                        return "test.show";
-                    }
-                ...
-            }
+    public function getShowRoute(){
+        return "test.show";
+    }
 
     if you don't need this route, return an empty srting like this:
 
