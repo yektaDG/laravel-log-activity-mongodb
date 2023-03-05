@@ -13,11 +13,7 @@ class LogServiceProvider extends ServiceProvider
 
   public function boot()
   {
- 
-    $this->publishes([
-        __DIR__.'/../config/database.php' => config_path('database.php'),
-    ], 'config');
-    
+    $this->mergeConfigFrom(__DIR__.'/../config/mongodb.php', 'database.connections');
     $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     $this->loadViewsFrom(__DIR__.'/../resources/views', 'logpackage');
 
