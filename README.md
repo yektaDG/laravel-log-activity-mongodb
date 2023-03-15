@@ -28,6 +28,17 @@ MONGODB_DATABASE=yourdatabase
         class Test extends Model
             {
                 use YektaLog;
+                
+                protected $foreignKeys = [
+                        'App\Models\Ticket' => 'ticket_id', 
+                        'App\Models\User' => 'user_id',
+                ];
+                public function getForeignKeys(){
+                        return $this->foreignKeys;
+                }
+                public function getShowRoute(){
+                        return "admin.user.show";
+                }
                 ....
             }
 
