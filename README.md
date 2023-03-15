@@ -1,16 +1,23 @@
 # laravel-LogActivity-MongoDB
 Log activity inside your Laravel app
 
-initializition config :
+![Log Panel](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGYzMmQyYjhkMTQ3YjQwMTcxZmYzNzc0ZWRhMWE0MjkzYjhhNDY5NyZjdD1n/q8AtyHuv7QbrsJUxdZ/giphy.gif)
+
+
+
+<b>initializition config :</b>
 
 By default, activities will be saved to the 'yektalog' database in the 'log' collection if no MongoDB configurations are set in the '.env' or 'config/database.php' files. To change the database to your custom one, add the following lines to the '.env' file in your Laravel application :
 
-MONGODB_CONNECTION=mongodb
+MONGODB_CONNECTION=mongodb 
+
 MONGODB_HOST=myhost
+
 MONGODB_PORT=27017
+
 MONGODB_DATABASE=yourdatabase
 
-installation :
+<b>installation :</b>
 
 1. remove 'composer.lock' file and 'vendor' folder
 2. run 'composer install' command
