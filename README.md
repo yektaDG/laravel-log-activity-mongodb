@@ -56,5 +56,5 @@ installation :
     
 * Use 'Yektadg\LaravelLogActivityMongodb\Models\Log' to access the Log Model like bellow :
     
-use Yektadg\LaravelLogActivityMongodb\Models\Log;
-$logs = Log::where('created_at' ,'!=', null);
+    use Yektadg\LaravelLogActivityMongodb\Models\Log;
+    $logs = Log::where('created_at' ,'!=', null);
