@@ -40,7 +40,7 @@ trait YektaLog{
                         'os'=>$device['os'],
                         'browser'=>$device['browser'],
                         'info'=>$device['info'],
-                        'route'=> $instance->getShowRoute(),
+                        'route'=> $parent->getShowRoute(),
                     ]
                 );
             }
@@ -81,7 +81,7 @@ trait YektaLog{
                         'os'=>$device['os'],
                         'browser'=>$device['browser'],
                         'info'=>$device['info'],
-                        'route'=> $instance->getShowRoute(),
+                        'route'=> $parent->getShowRoute(),
                     ]
                 );
             }
@@ -125,7 +125,7 @@ trait YektaLog{
                         'os'=>$device['os'],
                         'browser'=>$device['browser'],
                         'info'=>$device['info'],
-                        'route'=> $instance->getShowRoute(),
+                        'route'=> $parent->getShowRoute(),
                     ]
                 );
             }
