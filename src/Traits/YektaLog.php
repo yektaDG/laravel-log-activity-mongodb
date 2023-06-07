@@ -125,7 +125,8 @@ trait YektaLog{
                         'os'=>$device['os'],
                         'browser'=>$device['browser'],
                         'info'=>$device['info'],
-                        'route'=> $parent->getShowRoute(),
+                        'route'=> "test",
+                        // 'route'=> $parent->getShowRoute(),
                     ]
                 );
             }
